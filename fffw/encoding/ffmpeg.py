@@ -28,6 +28,7 @@ class FFMPEG(BaseWrapper):
     # noinspection SpellCheckingInspection
     arguments = [
         ('loglevel', '-loglevel '),
+        ('headers', '-headers '),
         ('strict', '-strict '),
         ('realtime', '-re '),
         ('threads', '-threads '),
@@ -53,7 +54,6 @@ class FFMPEG(BaseWrapper):
         ('absf', '-bsf:a '),
         ('format', '-f '),
         ('segment_list_flags', '-segment_list_flags '),
-        ('headers', '-headers '),
     ]
 
     def __init__(self, inputfile=None, **kw):
